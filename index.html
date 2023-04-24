@@ -1,0 +1,61 @@
+<html><head>
+        <title>CPSC 290: Directed Research</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Average&amp;display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="head">
+            <h1 class="headline">Evaluating Heuristics and Strategies on “The Game”</h1>
+        </div>
+        <hr>
+        <div class="subhead">
+            <h3>Author: Kaitlyn Sandor</h3>
+            <h3>Advisor: Jay Lim</h3>
+            <h3>1 Abstract</h3>
+        </div>
+        <div class="content">
+            <p>The Game is a 4 player game of number placement, communication, and collaboration towards one common goal. The basic goal of the game is to place all cards 2-99 in one of 4 piles. There are two piles starting with 1 and moving up, and two piles starting with 100 and moving down. Once a card is placed in a pile, the only cards that can be added to the pile must come after the preceding card. For example, if 88 is placed upon 100, only cards less than 88 can be played on that pile. The same is true in reverse. If a 30 is played upon a 1, only cards greater than 30 may be played on that pile. The only exception to this rule is a difference of 10. For example, if a pile starting at 100 and moving down is currently at 32 and someone has the card 42, the player may play the card 42 and the current value of that deck would move up to 42. The same would be true in reverse, a deck starting at 1 and moving up with a current value of 22 enables a player to play the card 11 and move the value of that deck down to 11. My project will evaluate different strategies for communication and game play as well as create an online web based version of the game. 
+            </p>
+        </div>
+        <div class="files">
+            <h3>2 Materials</h3>
+            <span><a href="proposal.pdf">Project Proposal</a></span> - 
+            <span><a href="final_paper.pdf">Final Report</a></span> - 
+            <span><a href="https://github.com/kaitlynsandor/CPSC290">Github Repository</a></span>
+        </div>
+        <style>
+            body {
+                font-family: 'Average', serif;
+            }
+            .subhead, .files, .headline {
+                padding-left: 2vw;
+            }
+            .content {
+                font-size: 14px;
+                width: 90vw;
+                padding-left: 2vw;
+            }
+            img {
+                width: 8vw;
+            }
+        </style>
+    
+
+<script>mendeleyWebImporter = {
+  downloadPdfs(e,t) { return this._call('downloadPdfs', [e,t]); },
+  open() { return this._call('open', []); },
+  setLoginToken(e) { return this._call('setLoginToken', [e]); },
+  _call(methodName, methodArgs) {
+    const id = Math.random();
+    window.postMessage({ id, token: '0.2009690926520643', methodName, methodArgs }, 'https://zoo.cs.yale.edu');
+    return new Promise(resolve => {
+      const listener = window.addEventListener('message', event => {
+        const data = event.data;
+        if (typeof data !== 'object' || !('result' in data) || data.id !== id) return;
+        window.removeEventListener('message', listener);
+        resolve(data.result);
+      });
+    });
+  }
+};</script></body></html>
